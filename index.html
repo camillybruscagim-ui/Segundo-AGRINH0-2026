@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 - Termômetro da Fazenda Sustentável</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Simulador Fazenda Sustentável</h1>
+            <p>Agrinho 2026: Produção em equilíbrio com o meio ambiente</p>
+        </header>
+
+        <section class="painel-status">
+            <div class="status-item">
+                <div class="status-label">
+                    <span>🚜 Produtividade da Safra</span>
+                    <span id="txt-producao">50%</span>
+                </div>
+                <div class="barra-fundo">
+                    <div id="barra-producao" class="barra-preenchimento"></div>
+                </div>
+            </div>
+            <div class="status-item">
+                <div class="status-label">
+                    <span>🌳 Preservação Ambiental</span>
+                    <span id="txt-ambiente">50%</span>
+                </div>
+                <div class="barra-fundo">
+                    <div id="barra-ambiente" class="barra-preenchimento"></div>
+                </div>
+            </div>
+        </section>
+
+        <main id="area-jogo" class="card-cenario">
+            <div id="contador" class="contador-etapa">Carregando...</div>
+            <p id="texto-cenario" class="descricao-cenario">Carregando cenário...</p>
+            
+            <div class="botoes-decisao">
+                <button class="btn-opcao" id="opt-A" onclick="fazerEscolha('A')">Opção A</button>
+                <button class="btn-opcao" id="opt-B" onclick="fazerEscolha('B')">Opção B</button>
+            </div>
+        </main>
+
+        <div id="tela-final" class="card-cenario oculto tela-final">
+            <h2>Simulação Concluída!</h2>
+            <p id="resultado-texto">Analisando o desempenho da sua gestão...</p>
+            <button class="btn-reiniciar" onclick="reiniciarJogo()">Simular Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

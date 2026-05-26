@@ -1,0 +1,170 @@
+:root {
+    --verde-agro: #2e7d32;
+    --verde-claro: #4caf50;
+    --azul-agua: #0288d1;
+    --cinza-fundo: #f4f6f7;
+    --texto-escuro: #263238;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--cinza-fundo);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, var(--verde-agro), var(--verde-claro));
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Painel de Status (As Barras) */
+.painel-status {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .painel-status { 
+        grid-template-columns: 1fr; 
+    }
+}
+
+.status-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.status-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.barra-fundo {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    height: 25px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.barra-preenchimento {
+    height: 100%;
+    width: 50%;
+    transition: width 0.5s ease-in-out;
+}
+
+#barra-producao { 
+    background-color: #ff9800; 
+}
+
+#barra-ambiente { 
+    background-color: var(--verde-claro); 
+}
+
+/* Área do Jogo / Cenários */
+.card-cenario {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.contador-etapa {
+    font-size: 0.9rem;
+    color: #78909c;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.descricao-cenario {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #37474f;
+}
+
+.botoes-decisao {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-opcao {
+    background-color: #ffffff;
+    border: 2px solid #cfd8dc;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.btn-opcao:hover {
+    border-color: var(--verde-claro);
+    background-color: #f1f8e9;
+    transform: translateY(-2px);
+}
+
+/* Tela de Feedback / Fim */
+.oculto { 
+    display: none !important; 
+}
+
+.tela-final {
+    text-align: center;
+    padding: 20px;
+}
+
+.tela-final h2 {
+    color: var(--verde-agro);
+    margin-bottom: 15px;
+}
+
+.btn-reiniciar {
+    background-color: var(--verde-agro);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-reiniciar:hover { 
+    background-color: var(--verde-claro); 
+}
